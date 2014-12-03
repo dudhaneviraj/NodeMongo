@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="page-data" align=center>
+      <h2>Gumball Machine</h2>
+      
+      <img src="http://grailsgumballmachinev2.cfapps.io/images/giant-gumball-machine.jpg">
+      <form  method="GET" action="/insert">
+      <b>     <label for="model">Model Number:<%=data.modelNumber%></label><br><br>
+          
+        
+          <label for="serial">Serial Number:<%=data.serialNumber%></label><br><br>
+          <label for="count">Gumball Count:<%=data.countGumballs%></label><br><br>
+          <label for="state">State:<%=data.state%></label><br><br><b>
+          <input type="hidden" name="state" value=<%=data.state%>>
+          <button type="submit" name="insert" value="insert"  >Insert Quarter</button><br>
+      </form>
+      <form  method="GET" action="/turn">
+      	<input type="hidden" name="state" value=<%=data.state%>>
+      	<br><button type="submit" name="turn" value="turn">Turn Crank</button>
+      </form>
+      
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
